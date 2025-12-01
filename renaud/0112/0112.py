@@ -42,7 +42,6 @@ def enter_combinations(input_path: str) -> int:
             position += number
         if position.value == 0:
             count_on_0 += 1
-    print(f"Final Position: {position}")
     return count_on_0
 
 
