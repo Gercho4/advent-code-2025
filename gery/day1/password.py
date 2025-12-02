@@ -1,4 +1,4 @@
-# file = open("gery/list")
+# file = open("gery/day1/list")
 # initlist = []
 
 # for i in file:
