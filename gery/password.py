@@ -1,4 +1,4 @@
-file = open("list")
+file = open("gery/list")
 initlist = []
 
 for i in file:
