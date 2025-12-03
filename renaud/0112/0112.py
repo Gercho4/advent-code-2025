@@ -1,5 +1,5 @@
 """
-python renaud/0112.py
+python renaud/0112/0112.py
 """
 
 
@@ -70,8 +70,8 @@ def enter_combinations_method_0x434C49434B(input_path: str) -> int:
 
 
 if __name__ == "__main__":
-    result = enter_combinations("renaud/0112_input.txt")
+    result = enter_combinations("renaud/0112/0112_input.txt")
     print(f"Result first part: {result}")
 
-    result_2 = enter_combinations_method_0x434C49434B("renaud/0112_input.txt")
+    result_2 = enter_combinations_method_0x434C49434B("renaud/0112/0112_input.txt")
     print(f"Result second part: {result_2}")
