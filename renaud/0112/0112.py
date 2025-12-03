@@ -3,23 +3,23 @@ python renaud/0112/0112.py
 """
 
 
-class IntegerMod99:
+class IntegerMod100:
     def __init__(self, value: int):
         self.value = value % 100
         self.abs_quotient = abs(value // 100)
 
     def __add__(self, other):
-        if isinstance(other, IntegerMod99):
-            return IntegerMod99(self.value + other.value)
+        if isinstance(other, IntegerMod100):
+            return IntegerMod100(self.value + other.value)
         if isinstance(other, int):
-            return IntegerMod99(self.value + other)
+            return IntegerMod100(self.value + other)
         return NotImplemented
 
     def __sub__(self, other):
-        if isinstance(other, IntegerMod99):
-            return IntegerMod99(self.value - other.value)
+        if isinstance(other, IntegerMod100):
+            return IntegerMod100(self.value - other.value)
         if isinstance(other, int):
-            return IntegerMod99(self.value - other)
+            return IntegerMod100(self.value - other)
         return NotImplemented
 
     def __repr__(self):
@@ -31,7 +31,7 @@ def enter_combinations(input_path: str) -> int:
         lines = file.readlines()
 
     count_on_0 = 0
-    position = IntegerMod99(50)
+    position = IntegerMod100(50)
     for line in lines:
         line = line.strip()
         direction = line[0]
@@ -50,7 +50,7 @@ def enter_combinations_method_0x434C49434B(input_path: str) -> int:
         lines = file.readlines()
 
     count_passed_on = 0
-    position = IntegerMod99(50)
+    position = IntegerMod100(50)
     for line in lines:
         line = line.strip()
         direction = line[0]
