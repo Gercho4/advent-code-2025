@@ -17,8 +17,8 @@ def right(state, directions, lst2):
         return (result, lst2)
     elif len(str(abs(result))) > 2:
         lst2.append(abs(result) // 100)
-        print(abs(result), lst2)
-        return (abs(result) % 100, lst2)
+        print(result % 100, lst2)
+        return (result % 100, lst2)
     else:
         print(abs(result), lst2)
         return (abs(result), lst2)
@@ -31,16 +31,19 @@ def left(state, directions, lst2):
         print(result, lst2)
         return (result, lst2)
     elif len(str(abs(result))) > 2:
-        lst2.append(abs(result) // 100)
-        print(abs(result), lst2)
-        return (abs(result) % 100, lst2)
-    elif result < 0:
+        if (result < 0) and state != 0:
+            lst2.append((abs(result) // 100) + 1)
+        else:
+            lst2.append(abs(result) // 100)
+        print(result % 100, lst2)
+        return (result % 100, lst2)
+    elif result < 0 and state != 0:
         lst2.append("1")
-        print(abs(result), lst2)
-        return (abs(result), lst2)
+        print(result % 100, lst2)
+        return (result % 100, lst2)
     else:
-        print(abs(result), lst2)
-        return (abs(result), lst2)
+        print(result % 100, lst2)
+        return (result % 100, lst2)
 
 
 password = []
