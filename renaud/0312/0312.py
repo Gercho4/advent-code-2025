@@ -54,41 +54,6 @@ def highest_combination_twelve(bank: str) -> int:
         current_left_position = max_index + 1
         current_right_position += 1
     return int(final_number_in_string)
-    # final_number = 0
-    # current_result_position = 11
-    # for i in range(len(bank) - 1):
-    #     if current_result_position < 0:
-    #         break
-    #     if 12 - current_result_position > len(bank) - i:
-    #         final_number += int(bank[i:])
-    #         break
-    #     current_number = int(bank[i])
-    #     next_number = int(bank[i + 1])
-    #     if current_number < next_number:
-    #         continue
-    #     elif next_number < current_number:
-    #         final_number += current_number * 10**current_result_position
-    #         current_result_position -= 1
-    #     else:  # next_number == current_number
-    #         continue
-    # if current_result_position == 0:
-    #     final_number += int(bank[-1])
-    # return final_number
-
-    # max_decimal = 0
-    # max_integer = 0
-    # for i in range(len(bank) - 1):
-    #     current_number = int(bank[i])
-    #     if current_number <= max_decimal:
-    #         continue
-    #     else:
-    #         max_decimal = current_number
-    #     for j in range(i + 1, len(bank)):
-    #         next_number = int(bank[j])
-    #         combination = current_number * 10 + next_number
-    #         if combination > max_integer:
-    #             max_integer = combination
-    # return max_integer
 
 
 def count_voltage_part_2(input_path: str) -> int:
